@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="es" data-ng-app="viewsApp">
+	<head>
+		<title>Google Calendar</title>
+		<meta name="google" content="notranslate">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="../CSS/reset.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script src="../JS/angular.min.js"></script>
+		<script src="../JS/angular-route.js"></script>
+		<script src="../JS/views.js"></script>
+		<script src="../JS/moment.js"></script>
+	</head>  
+	<body data-ng-controller="mainController">
+		<header>
+			<div id="header">
+				<div id="glogo" class="inline">
+					<a href="index.html" title="Calendar"><img src="../IMG/applogo.png"></a>			
+				</div>
+				<div id="gsearch" class="inline">
+					<!--<input type="search" placeholder="Buscar en Calendar"><img src="images\search.png">-->
+					<img src="../IMG/gsearch.png" alt="Google Logo" title="Calendar">
+				</div>
+				<div id="gbuttons" class="inline">
+					<a href="../LogoutServlet"><img src="../IMG/nav_buttons.png" alt="Google Logo" title="Calendar"></a>
+				</div>
+			</div>
+		</header>	
+		<nav>
+			<div id="nav"> 		
+				<div class="mainlogo inline">
+					<span id="mainlogo" title="Google Calendar">Calendar</span>
+				</div>
+				<div id="bdrcha" class="inline">
+					<div class="botones inline">
+							<a href="#day"><button>Día</button></a>
+							<a href="#week"><button>Semana</button></a>
+							<a href="#month"><button>Mes</button></a>
+							<a href="#4days"><button>4 días</button></a>
+							<a href="#agenda"><button>Agenda</button></a>
+						<button>Más</button>
+						<button><img src="../IMG/engine.png"></button><!--<img src="images\engine.png">-->
+					</div>
+				</div>
+			</div>
+		</nav>
+		<div id="body">
+			<nav id="lateral">
+				<div id="crear_c" class="lateral">
+					<a href="create_event.html"><button type="button" id="crear">crear</button></a>
+				</div>
+				<ul class="lateral">
+					<li>Minicalendario</li>
+					<li>Mis calendarios</li>
+					<li>Otros calendarios</li>
+				</ul>				
+			</nav>
+			<div id="content" class="inline">
+				<div data-ng-view></div>
+			</div>
+		</div>
+	</body>
+</html>

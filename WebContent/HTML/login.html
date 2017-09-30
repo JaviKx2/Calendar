@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Google Calendar</title>
+	<meta name="google" content="notranslate">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="CSS/reset.css">
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script src="JS/angular.min.js"></script>
+	<script src="JS/login.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+  		<div id="googlelogo">
+  			<img alt="Google" class="logo" src="IMG/applogo.png">
+  		</div>
+		<div id="eslogan">
+			<h1>Una cuenta. Todo Google.</h1>
+			<h2>Inicia sesión para ir a Google Calendar</h2>
+		</div>
+		<div ng-app="loginApp" id="login" class="login">
+			<img id="profile-img" class="profile-img" src="IMG/profile-img.jpg">
+		  	<form ng-controller="loginController" name="loginForm" method="post" action="LoginServlet">
+				<input ng-model="formfield.user" ng-class='{lerror: loginForm.user.$error.required && !loginForm.$pristine}' ng-pattern="/^[a-zA-Z]*$/" id="user" name="user" type="text" placeholder="Usuario" required>
+				<span ng-show="!loginForm.$pristine && loginForm.user.$error.required">Es necesario introducir un usuario.</span>
+				<span ng-show="!loginForm.$pristine && loginForm.user.$error.pattern">El usuario sólo puede contener letras (ñ no incluida).</span>
+				<input ng-model="formfield.password" ng-class='{lerror: loginForm.password.$error.required && !loginForm.$pristine}' id="password" name="password" type="password" placeholder="Contraseña" minlength="4" maxlength="8" required>
+				<span ng-show="!loginForm.$pristine && loginForm.password.$error.required">Es necesario introducir una contraseña.</span>
+				<span ng-show="!loginForm.$pristine && loginForm.password.$error.minlength">La contraseña es demasiado pequeña.</span>
+				<input ng-disabled='!loginForm.$valid' ng-class='{ldisabled: !loginForm.$valid}' id="signin" name="signin" type="submit" value="Iniciar sesión">			
+		  	</form>
+		  	{{formfield}}
+		  	<a href="#">¿Necesitas ayuda?</a>
+		  	
+		</div>
+		<div class="one-google">
+		  	<p class="switch-account">
+		  		<a id="account-chooser-link" href="#">Iniciar sesión con una cuenta diferente</a>
+		  	</p>
+			<p class="tagline">
+		  		Una sola cuenta de Google para todos los servicios de Google
+			</p>
+			<img id="gservices-img" src="IMG/gservices.png">
+		</div>
+	</div>
+</body>
+</html>

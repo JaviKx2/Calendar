@@ -1,0 +1,33 @@
+<button class="botones" data-ng-click="monthToday()">Today</button>
+<button class="botones" data-ng-click="monthBw()">Backward</button>
+<button class="botones" data-ng-click="monthFw()">Forward</button>
+<span>{{month+" "+ year}}</span>
+
+<table cellpadding="0" cellspacing="0" class="mv-table">
+	<thead class="mv-daynames-table" id="mvDaynamesTable">
+		<tr>
+			<th class="mv-dayname" title="lun">lun</th>
+			<th class="mv-dayname" title="mar">mar</th>
+			<th class="mv-dayname" title="mié">mié</th>
+			<th class="mv-dayname" title="jue">jue</th>
+			<th class="mv-dayname" title="vie">vie</th>
+			<th class="mv-dayname" title="sáb">sáb</th>
+			<th class="mv-dayname" title="dom">dom</th>
+		</tr> 
+	</thead>
+	<tbody>		
+		<tr data-ng-repeat="row in monthRows">
+			<td data-ng-repeat="column in monthColumns" class="mv-td">
+				<span data-ng-show="(7*row+column+1 >= startDay)&&(7*row+column+1-(startDay-1) <= endDay)">{{7*row+column+1-(startDay-1)}}<br></span>
+				<span data-ng-repeat="event in events">
+				<div data-ng-show="cmp(event.startdate, 7*row+column+2-startDay)">
+					<span>
+						{{event.name}}
+					</span>
+					<button ng-click="deleteEvent(event.id)"><img  src="../IMG/equis.png"></button><br>
+				</div>
+				</span>			
+			</td>		
+		</tr>
+	</tbody>
+</table>	

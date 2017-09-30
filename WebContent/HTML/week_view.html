@@ -1,0 +1,33 @@
+<button class="botones" data-ng-click="weekToday()">Today</button>
+<button class="botones" data-ng-click="weekBw()">Backward</button>
+<button class="botones" data-ng-click="weekFw()">Forward</button>
+<span>{{startDay+" - "+endDay+" "+month+" "+year}}</span>
+
+<table class="wk-table" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr class="wk-daynames">
+			<th class="wk-td" rowspan="2">GMT+01</th>
+			<th data-ng-repeat="weekDay in weekDays">{{weekDay}}</th>
+		</tr>
+		<tr>
+			<th data-ng-repeat="wkDay in wkDays" class="wk-td">
+				{{wkDay}}
+			</th>
+		</tr>
+
+		<tr data-ng-repeat="hour in hours">
+			<td class="wk-td">{{hour}}:00</td>
+
+			<td data-ng-repeat="wkDay in wkDays" class="wk-td">
+				<div data-ng-repeat="event in events">
+					<div data-ng-show="cmpDayAndHour(event.startdate, event.starttime, wkDay, hour)">
+						<span>
+							{{event.name}}
+						</span>
+						<button ng-click="deleteEvent(event.id, 1)"><img  src="../IMG/equis.png"></button><br>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>				

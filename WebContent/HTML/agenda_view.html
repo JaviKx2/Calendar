@@ -1,0 +1,12 @@
+<table cellpadding="20" class="agenda-table" >	
+	<tr ng-repeat="event in events">
+		<th class="agenda-td">{{event.startdate}}</th>
+		<td class="agenda-td">Todo el día</td>
+		<td class="agenda-td">
+			{{event.name}}
+		</td>
+		<td class="agenda-td">
+			<a href="#agenda" ng-click="deleteEvent(event.id)">Eliminar</a>
+		</td>
+	</tr>
+</table> 

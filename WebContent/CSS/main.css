@@ -1,0 +1,258 @@
+/* main.css*/
+
+/* index.html, day.html, semanal.html
+	mensual.html, 4days.html, agenda.html, 
+	crear_evento.html*/
+nav, #body{
+	clear: both;
+}
+
+.inline{
+	display: inline-block;
+}
+header{
+	height: 60px;
+}
+nav{
+	height: 40px;
+}
+body{
+	font-family: Roboto;
+	height: 100%;
+}
+#header{
+	height: 50px;
+	background-color: #f1f1f1;
+	padding: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+#nav div{
+	height: 100%;
+}
+#body{
+	height: 545px;
+}
+#nav {
+	clear: both;
+	height: 30px;
+	padding: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-bottom: 1px solid;
+	border-color: #f1f1f1;
+}
+
+#glogo, #gsearch, #gbuttons{
+	height: 30px;
+}
+#glogo{
+	width: 204px;
+}
+#glogo img{
+	width: 92px;
+	height: 33px;
+}
+#gbuttons{
+	margin-left: 195px;
+}
+
+#mainlogo {
+	color: #dd4b39;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+.botones button{
+	height: 30px;
+	width: 70px;
+	box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-webkit-box-sizing:border-box;
+}
+#bizq{
+	margin-left: 140px;
+}
+#bdrcha{
+	float:right;
+}
+#crear{	
+	height: 29px;
+	width: auto;
+	background-color: #d14836;
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: #c6322a;
+    box-sizing:border-box;
+  	-moz-box-sizing:border-box;
+  	-webkit-box-sizing:border-box;
+    color: white;
+    text-transform: uppercase;
+}
+.lateral{
+	margin-left: 30px;
+	margin-top: 15px;
+}
+#lateral{
+	float: left;
+	width: 15%;
+	height: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	-webkit-box-sizing: border-box;
+}
+#content{
+	float: left;
+	width: 85%;
+	height: 100%;
+	overflow-y: scroll;
+	padding-top: 5px;
+}
+
+/* Vista mensual (mensual.html)*/
+.mv-daynames-table {
+	background: #fff;
+	color: #555;
+	table-layout: fixed;
+	width: 100%;
+	height: 5%;
+	text-align: left;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin: auto;
+}
+
+.mv-table{
+	width: 100%;
+	height: 100%;
+	table-layout: fixed;
+	border: 1px solid;
+	text-align: left;
+	vertical-align: top;
+	margin: auto;
+}
+
+.mv-td{
+	border: 1px solid;
+}
+/* Vista semanal (semanal.html)*/
+.wk-td{
+	border: 1px dotted;
+	vertical-align: middle;
+}
+.wk-table{
+	background: #fff;
+	color: #555;
+	table-layout: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin: auto;
+	border: 1px solid;
+}
+
+.agenda-table{
+	background: #fff;
+	color: #555;
+	text-align: center;
+	vertical-align: middle;
+	width: 100%;
+}
+.agenda-td{
+	border-bottom: 1px solid;
+	border-color: gray;
+	text-align: left;
+	vertical-align: bottom;
+	padding: 20px 20px 0px 20px;
+}
+
+/*login.html*/
+.wrapper{
+	width: 100%;
+	text-align: center;
+}
+
+h1{
+	font-size: 20px;
+}
+h2{
+	font-size: 16px;
+}
+#login{
+	margin: 0 auto;
+	margin-bottom: 10px;
+	text-align: center;
+	background-color: #f1f1f1;
+	box-shadow: 0px 2px 10px 1px #999;
+	-webkit-box-shadow: 0px 2px 10px 1px #999;
+	-moz-box-shadow: 0px 2px 10px 1px #999;
+	width: 270px;
+	height: 285px;
+	padding: 40px;
+}
+.lerror{
+	box-shadow: 0px 1px 5px 1px #990000;
+	-webkit-box-shadow: 0px 1px 5px 1px #990000;
+	-moz-box-shadow: 0px 1px 5px 1px #990000;
+	border: thin solid #990000;
+}
+.lsuccess{
+	box-shadow: 0px 2px 10px 1px #00ff00;
+	-webkit-box-shadow: 0px 2px 10px 1px #00ff00;
+	-moz-box-shadow: 0px 2px 10px 1px #00ff00;
+	border: thin solid #00ff00;
+}
+.ldisabled{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: gray;
+	background-color: gray;
+	border: 1px solid black;	
+}
+
+#profile-img{
+	width: 96px;
+	height: 96px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+#user, #password, #signin{
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+}
+#signin{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #fff;
+	background-color: #4d90fe;
+	border: 1px solid #3079ed;	
+}
+#googlelogo, #eslogan{
+	padding: 15px;
+}
+#gservices-img{
+	width: 210px;
+	height: 17px;
+}
+
+/*Creación evento */
+#event-form{
+	margin-left: 30px;
+}
+
+.fs-form input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#event-info{
+	font-size: 15px;
+	font-style: bold;
+}
